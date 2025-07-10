@@ -9,7 +9,8 @@ const products = [
         brand: "Apple",
         rating: 4.5,
         ratingCount: 128,
-        image: "/images/iphone15.png",
+        image: "/FirstWebSite
+        /images/iphone15.png",
         description: "Pantalla Super Retina XDR, cámara triple 48MP, chip A17 Pro, 128GB de almacenamiento.",
         badge: "Nuevo"
     },
