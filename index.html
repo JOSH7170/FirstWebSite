@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Electrónicos en Colombia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="TechShop Logo">
+                <h1>TechShop</h1>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos..." id="search-input">
+                <div class="search-results" id="search-results">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+            
+            <div class="nav-icons">
+                <a href="#" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#" class="nav-link" data-page="catalog">
+                    <i class="fas fa-th-list"></i>
+                    <span>Catálogo</span>
+                </a>
+                <a href="#" class="nav-link cart-icon" data-page="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Carrito</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <a href="#" class="nav-link" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contacto</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div class="page active" id="home-page">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>30% OFF en Smartphones</h2>
+                <p>Encuentra los mejores electrónicos al mejor precio. ¡Envíos rápidos y garantía incluida!</p>
+                <a href="#" class="btn btn-primary" data-page="catalog">Ver Ofertas</a>
+            </div>
+        </section>
+
+        <!-- Price Filter Section -->
+        <section class="price-range-container">
+            <div class="price-range-group">
+                <h3>Filtrar por Precio</h3>
+                <input type="range" min="0" max="10000000" value="10000000" class="price-range" id="price-range">
+                <div class="price-values">
+                    <span>$0</span>
+                    <span>$10'000.000</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <div class="section-title">
+                <h2>Ofertas Relámpago</h2>
+                <div class="timer" id="countdown"><i class="fas fa-bolt"></i> 02:00:00</div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Catalog Page -->
+    <div class="page" id="catalog-page">
+        <section class="products" style="padding-top: 3rem;">
+            <div class="section-title">
+                <h2>Nuestro Catálogo</h2>
+            </div>
+            
+            <div class="products-grid" id="catalog-grid">
+                <!-- Catalog products will be loaded here by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Cart Page -->
+    <div class="page" id="cart-page">
+        <div class="cart-page">
+            <div class="cart-header">
+                <h1 class="cart-title">Tu Carrito de Compras</h1>
+                <a href="#" class="continue-shopping" data-page="catalog">
+                    <i class="fas fa-arrow-left"></i> Continuar comprando
+                </a>
+            </div>
+            
+            <div class="cart-container">
+                <div class="cart-items-container" id="cart-items-container">
+                    <!-- Cart items will be loaded here -->
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Tu carrito está vacío</p>
+                        <a href="#" class="btn btn-primary" data-page="catalog" style="margin-top: 1rem;">Explorar productos</a>
+                    </div>
+                </div>
+                
+                <div class="cart-summary" id="cart-summary">
+                    <h3 class="summary-title">Resumen de Compra</h3>
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal</span>
+                        <span class="summary-value" id="subtotal">$0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Envío</span>
+                        <span class="summary-value" id="shipping">$0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Descuento</span>
+                        <span class="summary-value" id="discount">-$0</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span class="summary-label">Total</span>
+                        <span class="summary-value" id="total">$0</span>
+                    </div>
+                    <button class="btn btn-primary checkout-btn-large" id="checkout-btn">Proceder al Pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page" id="contact-page">
+        <div class="contact-page">
+            <div class="contact-header">
+                <h1 class="contact-title">Contáctanos</h1>
+                <p class="contact-subtitle">¿Tienes alguna pregunta o comentario? Estamos aquí para ayudarte. Completa el formulario o contáctanos directamente.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 class="info-title">Información de Contacto</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Dirección</h4>
+                            <p>Calle 72 #45-67, Barranquilla, Colombia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Teléfono</h4>
+                            <p>+57 1 2345678<br>Lunes a Viernes: 9am - 6pm</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>info@techshop.com.co<br>soporte@techshop.com.co</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Redes Sociales</h4>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2 class="form-title">Envíanos un Mensaje</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Asunto</label>
+                            <input type="text" id="subject" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" class="form-textarea" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5955890273954!2d-74.8058778501895!3d10.99386688120222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d0c914d68f9%3A0x3720fb204d4630a4!2sCl%2072%20%2345-67%2C%20Nte.%20Centro%20Historico%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1752116321469!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floating-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <div class="cart-preview" id="cart-preview">
+            <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+            <div id="cart-items">
+                <!-- Cart items will appear here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Tu carrito está vacío</p>
+                </div>
+            </div>
+            <div class="cart-total">Total: <span id="cart-total-price">$0</span></div>
+            <a href="#" class="btn btn-primary checkout-btn" data-page="cart">Pagar Ahora</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="/images/logo.png" alt="TechShop Logo">
+                </div>
+                <p>TechShop es tu tienda de confianza para los mejores productos electrónicos al mejor precio en Colombia. Ofrecemos calidad, garantía y el mejor servicio al cliente.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#" data-page="home">Inicio</a></li>
+                    <li><a href="#" data-page="catalog">Productos</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 72 #45-67, Barranquilla</p>
+                <p><i class="fas fa-phone-alt"></i> +57 1 2345678</p>
+                <p><i class="fas fa-envelope"></i> info@techshop.com.co</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir nuestras ofertas exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-secondary newsletter-btn">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 TechShop Colombia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
