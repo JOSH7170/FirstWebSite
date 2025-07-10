@@ -35,7 +35,7 @@ const products = [
         brand: "Apple",
         rating: 4.9,
         ratingCount: 178,
-        image: "/images/mac.png",
+        image: "/FirstWebSite/mac.png",
         description: "Chip M2 Pro, pantalla Liquid Retina XDR, 16GB RAM, 512GB SSD, 14.2 pulgadas.",
         badge: "Popular"
     },
@@ -48,7 +48,7 @@ const products = [
         brand: "Sony",
         rating: 4.7,
         ratingCount: 342,
-        image: "/images/soni.png",
+        image: "/FirstWebSite/soni.png",
         description: "Audífonos inalámbricos con cancelación de ruido líder, 30h de batería, sonido Hi-Res.",
         badge: "20% OFF"
     },
@@ -61,7 +61,7 @@ const products = [
         brand: "Xiaomi",
         rating: 4.3,
         ratingCount: 87,
-        image: "/images/xiao.png",
+        image: "/FirstWebSite/xiao.png",
         description: "Pantalla AMOLED 120Hz, cámara 50MP, carga rápida 67W, 128GB de almacenamiento.",
         badge: "Oferta"
     },
@@ -74,7 +74,7 @@ const products = [
         brand: "Apple",
         rating: 4.6,
         ratingCount: 156,
-        image: "/images/wat.png",
+        image: "/FirstWebSite/wat.png",
         description: "Monitor de salud avanzado, resistente al agua, GPS, pantalla Always-On, 41mm.",
         badge: "Nuevo"
     },
@@ -87,7 +87,7 @@ const products = [
         brand: "Dell",
         rating: 4.7,
         ratingCount: 92,
-        image: "/images/dell.png",
+        image: "/FirstWebSite/dell.png",
         description: "Pantalla InfinityEdge 4K, Intel Core i9, 32GB RAM, 1TB SSD, NVIDIA RTX 3050.",
         badge: "Reacondicionado"
     },
@@ -100,7 +100,7 @@ const products = [
         brand: "Bose",
         rating: 4.5,
         ratingCount: 203,
-        image: "/images/bos.png",
+        image: "/FirstWebSite/bos.png",
         description: "Cancelación de ruido líder, sonido equilibrado, 24h de batería, Bluetooth 5.1.",
         badge: "15% OFF"
     },
@@ -113,7 +113,7 @@ const products = [
         brand: "Samsung",
         rating: 4.6,
         ratingCount: 76,
-        image: "/images/sam.png",
+        image: "/FirstWebSite/sam.png",
         description: "Pantalla Super AMOLED 14.6\", S Pen incluido, 256GB, 8GB RAM, Snapdragon 8 Gen 1.",
         badge: "Oferta"
     },
@@ -126,7 +126,7 @@ const products = [
         brand: "Sony",
         rating: 4.8,
         ratingCount: 421,
-        image: "/images/ps5.png",
+        image: "/FirstWebSite/ps5.png",
         description: "Consola PS5 con lector de discos, control DualSense, 825GB SSD, 4K 120Hz.",
         badge: "Popular"
     },
@@ -139,7 +139,7 @@ const products = [
         brand: "Apple",
         rating: 4.7,
         ratingCount: 312,
-        image: "/images/air.png",
+        image: "/FirstWebSite/air.png",
         description: "Cancelación activa de ruido, sonido adaptativo, estuche con carga MagSafe, 6h de batería.",
         badge: "Nuevo"
     },
@@ -152,7 +152,7 @@ const products = [
         brand: "LG",
         rating: 4.9,
         ratingCount: 134,
-        image: "/images/lg.png",
+        image: "/FirstWebSite/lg.png",
         description: "TV OLED 4K 120Hz, AI ThinQ, Dolby Vision IQ, Game Optimizer, WebOS 22.",
         badge: "20% OFF"
     }
