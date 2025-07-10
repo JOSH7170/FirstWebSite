@@ -9,8 +9,7 @@ const products = [
         brand: "Apple",
         rating: 4.5,
         ratingCount: 128,
-        image: "/FirstWebSite
-        /images/iphone15.png",
+        image: "/FirstWebSite/iphone15.png",
         description: "Pantalla Super Retina XDR, cámara triple 48MP, chip A17 Pro, 128GB de almacenamiento.",
         badge: "Nuevo"
     },
@@ -23,8 +22,7 @@ const products = [
         brand: "Samsung",
         rating: 4.8,
         ratingCount: 215,
-        image: "/FirstWebSite
-        /images/s23.png",
+        image: "/FirstWebSite/s23.png",
         description: "Pantalla Dynamic AMOLED 2X de 6.8\", cámara 200MP, S Pen incluido, 256GB de almacenamiento.",
         badge: "Oferta"
     },
